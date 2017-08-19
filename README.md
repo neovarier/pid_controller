@@ -40,7 +40,7 @@ Approach for final parameters:
 4) Further tuning Kp to 2.0 to provide the CTE correction in case of sharp turns.
 5) Tuned Ki to further fine tune remaining small errors. Reducing Ki from 0.1 to 0.0001 gave good results.
 
-With Kp = 0.2, Kd = 0.1 and Ki = 0.0001, I was able to get good results.
+With Kp = 0.2, Kd = 7.0 and Ki = 0.0001, I was able to get good results.
 
 ![Video Link 4](./final_pid.mp4)
 
