@@ -1,11 +1,5 @@
 # Pid Controller
 
-[//]: # (Image References)
-[video1]: ./pid_kp_0.1.mp4
-[video2]: ./pid_kp_0.1_kd_3.0.mp4
-[video3]: ./pid_track_kp_0.2_kd_7.0_ki_0.1.mp4
-[video4]: ./final_pid.mp4
-
 I have used manual tuning to arrive at the pid controller coefficients to calculate the steering control to be applied.
 
 Effect of P-,I-,D-controllers:
@@ -33,6 +27,7 @@ Integral controller
 The I-controller along with PD-controller tries to compensate the CTE in case of systematic bias, which could be because of misalligned steering. It does this by adding a term propotional to the integral of the cross track error. The I-controller is actuall the sum of all previous CTE, which compensates for the bias present in the system. 
 
 By setting Ki to 0.1 was steering the car out of the road immediately. This would be because the systematic bias is not very high.
+
 ![Video Link 3](./pid_track_kp_0.2_kd_7.0_ki_0.1.mp4)
 
 Reducing the Ki to lesser order values reduced this behaviour.
@@ -46,11 +41,9 @@ Approach for final parameters:
 5) Tuned Ki to further fine tune remaining small errors. Reducing Ki from 0.1 to 0.0001 gave good results.
 
 With Kp = 0.2, Kd = 0.1 and Ki = 0.0001, I was able to get good results.
+
 ![Video Link 4](./final_pid.mp4)
 
 There are few instances where there quick turns taken by the car. The trajectory may not be completely smooth.
 Upon reflection, the PID parameters should be adjusted in real-time based on the speed of the car and the track that the car takes.
 A real-time algorithm which keeps adjusting these parameters would further smoothen the trajectory of the car.
-
-
-
