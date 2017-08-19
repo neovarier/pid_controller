@@ -23,7 +23,7 @@ Following result with kp = 0.1 & kd = 3.0.
 ![Video Link 2](./pid_kp_0.1_kd_3.0.mp4)
 
 ### Integral controller
-The I-controller along with PD-controller tries to compensate the CTE in case of systematic bias, which could be because of misalligned steering. It does this by adding a term propotional to the integral of the cross track error. The I-controller takes into account the sum of all previous CTE. Based on the accumulated CTE it compensates the error by the bias.
+The I-controller along with PD-controller tries to compensate the CTE in case of systematic bias, which could be because of misalligned steering. It does this by adding a term propotional to the integral of the cross track error. The I-controller takes into account the sum of all previous CTE. Based on the accumulated CTE it compensates the error introduced by the bias.
 
 By setting Ki to 0.1 was steering the car out of the road immediately.
 
